@@ -1,0 +1,166 @@
+#root {
+    max-width: 1280px;
+    min-width: 500px;
+    margin: 0 auto;
+    // padding: 2rem;
+    text-align: center;
+  }
+  
+  .cross-icon {
+    position: absolute;  // Position cross icon inside the portrait
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  
+  .card{
+    display:flex;
+    flex-direction: column;
+    background-color: #161616;/*
+    width: 250px;
+    border: 1px solid transparent; */
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    
+    overflow: hidden;
+    align-items: flex-start;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+    &:active{
+      transform:scale(.99)
+    }
+
+    &:hover{
+      display:flex;
+      background: #22ac9c;
+      cursor: pointer;
+    }
+
+  }
+
+  .hidden{
+    display: none;
+    scale: 0;
+    height: 0;
+    // padding: 0;
+    // margin: 0;
+  }
+
+
+  .header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    .wrapper{
+      padding: 5px;
+      .portrait{
+        position: relative;  // Make portrait the relative container
+        width: 100px;
+        
+        .Img{
+          width: 100px;
+        }
+      }
+    }
+    .information{
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .wrap{
+          display:flex;
+          justify-content: space-between;
+
+          .name{
+              font-family: "October Crow";
+              position: relative;
+              display:flex;
+              /* height: 40px; */
+              width: 50%;
+              float: left;
+              font-size: 2.2em;
+              line-height: 1.1;
+              align-items: center;
+              
+          }
+          .sanity{
+            color: #c481bb
+          }
+          .ghost_speed{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .child{
+              display: flex;
+              align-items: center;
+              &:active{
+                transform:scale(1.5)
+              }
+            }
+          }
+      }
+      .ghost_evidence{
+        display:flex;
+        align-items:center;
+        /* justify-content:center; */
+        width: 100%;
+        font-size: 1em;
+        gap:10px;
+    
+        .ghost_evidence_item { 
+          font-family: 'horror-boat';
+          > img{
+            margin-right: 3px;
+            height: 20px;
+          }   
+          &:nth-child(n+3){
+            background-color: #815858;
+    
+            border-radius: 20%;
+      
+            // color: #fff;
+            // text-align: center;
+            // background: #000
+          }
+        }
+      
+      }
+    }
+    
+  }
+  
+  .content {
+    display:flex;
+    width: 100%;
+    transition: max-height 0.4s ease;
+
+    // padding: 5px 0px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+  }
+
+
+  ul{
+    display: flex;
+    // font-family: 'VTC JoeleneHand';
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    flex-direction: column;
+    // align-items: center;
+  }
+  
+
+  
+
+  .read-the-docs {
+    color: #888;
+  }
+  

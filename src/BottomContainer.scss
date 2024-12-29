@@ -1,0 +1,12 @@
+.BottomContauner {
+    display: flex;
+    height: 25vh; 
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    background-color: lightgray; 
+  
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }

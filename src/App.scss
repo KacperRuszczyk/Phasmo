@@ -1,0 +1,28 @@
+
+  
+.BottomContauner {
+  display: flex;
+  height: 25vh; 
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  background-color: lightgray; 
+  border-radius: 10px;
+  max-width: 1280px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.CardContainer {
+  // opacity: 0.5;
+  
+  max-width: 1280px;
+  width: 100%;
+    &::after{
+      display: block;
+      content:" ";
+      height: 25vh;
+      
+    }
+  }
