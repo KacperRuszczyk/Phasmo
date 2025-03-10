@@ -17,9 +17,6 @@ export default function Stopwatch () {
     return () => clearInterval(intervalId);
   }, [isRunning, time]);
 
-  // Hours calculation
-  const hours = Math.floor(time / 360000);
-
   // Minutes calculation
   const minutes = Math.floor((time % 360000) / 6000);
 
@@ -41,7 +38,7 @@ export default function Stopwatch () {
   return (
     <div className="stopwatch-container">
       <p className="stopwatch-time">
-        {hours}:{minutes.toString().padStart(2, "0")}:
+        {minutes.toString().padStart(2, "0")}:
         {seconds.toString().padStart(2, "0")}:
         {milliseconds.toString().padStart(2, "0")}
       </p>

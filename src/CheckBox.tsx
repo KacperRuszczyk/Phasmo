@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { CheckBoxValue } from "./App";
-
+import "./CheckBox.scss"
 
 
   export default function CheckBox()  {
@@ -28,9 +28,9 @@ import { CheckBoxValue } from "./App";
     };
  
     return (
-      <div className='checkBox'>
+      <div className='check-box'>
         {checkboxValues.map((value, index) => (
-          <label key={index}>
+          <label key={index} className='check'>
             <input
               type="checkbox"
               value={value}

@@ -1,12 +1,11 @@
-.BottomContauner {
+.BottomContainer {
     display: flex;
+    align-items: center;
     height: 25vh; 
     position: fixed;
     bottom: 0;
     width: 100%; 
-    background-color: lightgray; 
-  
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: #7d8f95;
+    
+    color: black;
   }

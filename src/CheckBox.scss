@@ -1,0 +1,18 @@
+.check-box{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: space-between;
+  
+  .check{
+    width: 50%;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    
+    box-shadow: 2px 2px 4px #000;
+  }
+}

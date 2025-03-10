@@ -285,7 +285,7 @@
             "wiki": {
                 "tells": [
                     {
-                        "data": "Unique scream through Parabolic Microphone <span class=\"sound\" onClick=\"playSound('https://zero-network.net/phasmophobia/static/assets/banshee_scream.mp3')\">🔊</span>",
+                        "data": "Unique scream through Parabolic Microphone",
                         "is_0_evi": true,
                         "include_on_card": true
                     },
@@ -806,7 +806,7 @@
                         "include_on_card": true
                     },
                     {
-                        "data": "Will <i>not</i> do \"Ghost Mist\" event",
+                        "data": "Will not do \"Ghost Mist\" event",
                         "is_0_evi": true,
                         "include_on_card": true
                     },
@@ -1360,7 +1360,7 @@
             "wiki": {
                 "tells": [
                     {
-                        "data": "Special 6 fingered fingerprints (<span class=\"wiki-link\" onclick='openWikiPath(\"ghost-data.obake-fingerprints\")'>Open 'Guides' tab</span>)",
+                        "data": "Special 6 fingered fingerprints",
                         "is_0_evi": false,
                         "include_on_card": true
                     },
@@ -1370,7 +1370,7 @@
                         "include_on_card": true
                     },
                     {
-                        "data": "Has a chance to change models for a single blink during hunts at least once per standard length hunt (<span class=\"wiki-link\" onclick='openWikiPath(\"ghost-data.obake-blinking\")'>See deeper explanation</span>)",
+                        "data": "Has a chance to change models for a single blink during hunts at least once per standard length hunt",
                         "is_0_evi": true,
                         "include_on_card": true
                     }
@@ -1583,7 +1583,7 @@
             "wiki": {
                 "tells": [
                     {
-                        "data": "Heavy breathing through spirit box when within 1m of the ghost  <span class=\"sound\" onClick=\"playSound('https://zero-network.net/phasmophobia/static/assets/deogen_breathing.mp3')\">🔊</span>",
+                        "data": "Heavy breathing through spirit box when within 1m of the ghost",
                         "is_0_evi": false,
                         "include_on_card": true
                     },
