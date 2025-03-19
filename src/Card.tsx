@@ -1,4 +1,4 @@
-import { Ghost } from './Interfaces';
+import { Ghost , evidence} from './Interfaces';
 import './Card.scss'
 import { Context } from './CardContainer'
 import {CheckBoxValue} from './App'
@@ -35,7 +35,7 @@ function Card({ghost}: appProps) {
     return(null)
   } 
   const {selectedItems: selectedItems} = checkBoxValue;
-  const hasCommonValues = selectedItems.every(item => ghost.evidence.includes(item));
+  const hasCommonValues = selectedItems.every(item => ghost.evidence.includes(item as evidence));
 
   const context = useContext(Context);
   if (context === undefined){

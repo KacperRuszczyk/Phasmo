@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react'
+import {useState} from 'react'
 
 import './App.scss'
 import { getGhosts } from './stores/ghost_fetcher';

@@ -7,7 +7,7 @@ export default function TopLogo({url}: {url: string}){
   if (context === undefined){
     return(null)
   } 
-  const {unHidden: unHidden, setUnHidden} = context;
+  const {setUnHidden} = context;
 
   const delay = async (ms: number) => {
     return new Promise((resolve) => 

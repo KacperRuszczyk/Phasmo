@@ -19,7 +19,7 @@ export interface GhostList {
     portrait : string
     wiki: Wiki
   }
-  type evidence = 'Writing'|'EMF 5'|'Ultraviolet'|'Freezing'|'DOTs'|'Ghost Orbs'|'Spirit Box'
+  export type evidence = 'Writing'|'EMF 5'|'Ultraviolet'|'Freezing'|'DOTs'|'Ghost Orbs'|'Spirit Box'
   
   export interface Wiki {
     tells: Tell[]

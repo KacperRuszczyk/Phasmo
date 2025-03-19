@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { Ghost, GhostList } from "./Interfaces";
+import { Ghost } from "./Interfaces";
 
 import './CardContainer.scss'
 import TopLogo from "./stores/TopLogo";
@@ -21,7 +21,7 @@ export const Context = React.createContext<IContext|undefined>(undefined);
 
 
 export default function CardContainer(props: CardContainerProps) {
-  const [forceOn, setForceOn] = useState(false);
+  const [forceOn] = useState(false);
   const [unHidden, setUnHidden] = useState(false);
   
   const value = {unHidden, setUnHidden};
