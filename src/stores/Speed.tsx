@@ -20,7 +20,7 @@ function Speed({speed}: {speed: number}){
       }
       else{
         if (!audioRef.current) {
-          audioRef.current = new Audio("./sounds/footstep.mp3");
+          audioRef.current = new Audio("https://zero-network.net/phasmophobia/static/assets/footstep.mp3");
         }
     
       
