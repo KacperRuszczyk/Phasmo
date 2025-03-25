@@ -30,7 +30,7 @@ export default function CardContainer(props: CardContainerProps) {
     
       <Context.Provider value = {value}>
         <TopLogo url = { 'https://www.meme-arsenal.com/memes/a65584195768dd4ee9aeac93ef033de9.jpg'} />
-        {props.ghosts.map(ghost => <Card ghost={ghost} forceOn={forceOn}/>)}  
+        {props.ghosts.map(ghost => <Card ghost={ghost} forceOn={forceOn} key={ghost.ghost}/>)}  
       </Context.Provider>
     </div>
   );
