@@ -42,11 +42,11 @@ function Speed({speed}: {speed: number}){
   
 
     return(
-      <div>
+      
         
-        <div onClick={toggleSound}>{speed} {intervalId ? '🔊' : '🔇'}</div>
+        <div className={"speed"} onClick={toggleSound}>{speed} {intervalId ? '🔊' : '🔇'}</div>
         
-      </div>
+      
     )
   }
 

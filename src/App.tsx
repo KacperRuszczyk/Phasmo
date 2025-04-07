@@ -20,8 +20,10 @@ export default function App():JSX.Element {
   return (
 
     <CheckBoxValue.Provider value = {value}>
+    <div className="App">
       <CardContainer ghosts={ghostList.ghosts}/>
       <BottomContainer/>
+    </div>
     </CheckBoxValue.Provider>
 
   );
