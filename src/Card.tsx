@@ -54,7 +54,11 @@ function Card({ghost}: appProps) {
       "rgb(0, 0, 0)",
       "rgb(3, 209, 0)"
   ]);
-
+  const backgroundColor = useTransform(x, xInput, [
+    "rgb(147,0,0)",  // Red when dragged to the left
+    "rgb(0, 0, 0)",    // Black when centered
+    "rgb(0,0,0)"   // Green when dragged to the right
+  ]);
   
   useLayoutEffect(() => {
     if (contentRef.current) {
@@ -104,76 +108,63 @@ function Card({ghost}: appProps) {
   },[selectedItems])
 
   return (
-    <motion.div className="motion-div" >
-        <motion.div
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          style={{ x }}
-          onDragStart={() => console.log('Drag started')}
-          onDrag={() => console.log(x.get())} 
-          onDragEnd={() => handleDragEnd(x.get())}
-        >
-        
-    <div className={className} onClick={handleCardToggle}>
-      
-      <div id="header" className="header">
-        <div className="wrapper">
-          <div className='portrait'>
-            <Img url = {ghost.portrait}/>
-            <svg 
-              className="cross-icon" 
-              viewBox="0 0 50 50"  
-              >
-              <motion.path
-                fill="none"
-                strokeWidth="2"
-                stroke={color}
-                d="M17,17 L33,33"
-                strokeDasharray="0 1"
-                style={{ pathLength: crossPathA }}
-              />
-              <motion.path
-                fill="none"
-                strokeWidth="2"
-                stroke={color}
-                d="M33,17 L17,33"
-                strokeDasharray="0 1"
-                style={{ pathLength: crossPathB }}
-              />
-              </svg>
-              {/* {unHidden ? 'ON':'OFF'}{selectedItems}{hasCommonValues ? 'YYYYY':'NNNNN'} */}
-          </div>
-        </div>
-        <div className="information">
-          <div className="wrap">
-            <div className="name">{ghost.ghost}
-              
-            </div>
-            <div className="sanity">🧠{ghost.hunt_sanity}</div>
-            <div className="los">{ghost.has_los ? '🏃‍♂️' : '🧍‍♂️'}</div>
-            <div className="ghost_speed">   
-              <Speed speed = {ghost.min_speed}/>
-              {ghost.max_speed ? <Speed speed = {ghost.max_speed}/> : ''}
-              {ghost.alt_speed ? <Speed speed = {ghost.alt_speed}/> : ''}
-            </div>
-          </div>
-          <div className="ghost_evidence">{ghost.evidence.map(evidence => renderEvidence(evidence))}</div>
-        </div>
-      </div>
 
-      <div className="content" ref={contentRef}>
-        <div>
-          <i>Tells</i>
+      <motion.div className={className}  onClick={handleCardToggle}
+                  drag="x"
+                  dragConstraints={{left: 0, right: 0}}
+                  style={{x,backgroundColor}}
+                  onDragEnd={() => handleDragEnd(x.get())}
+      >
+        
+          <motion.path
+              fill="none"
+              strokeWidth="2"
+              stroke={color}
+              d="M17,17 L33,33"
+              strokeDasharray="0 1"
+              style={{pathLength: crossPathA}}
+          />
+          <motion.path
+              fill="none"
+              strokeWidth="2"
+              stroke={color}
+              d="M33,17 L17,33"
+              strokeDasharray="0 1"
+              style={{pathLength: crossPathB}}
+          />
+        
+        <div id="header" className="header">
+          
+            <div className='portrait'>
+              <Img url={ghost.portrait}/>
+
+            
+          </div>
+          <div className="information">
+            <div className="wrap">
+              <div className="name">{ghost.ghost}
+
+              </div>
+              <div className="sanity">🧠{ghost.hunt_sanity}</div>
+              <div className="los">{ghost.has_los ? '🏃‍♂️' : '🧍‍♂️'}</div>
+              <div className="ghost_speed">
+                <Speed speed={ghost.min_speed}/>
+                {ghost.max_speed ? <Speed speed={ghost.max_speed}/> : ''}
+                {ghost.alt_speed ? <Speed speed={ghost.alt_speed}/> : ''}
+              </div>
+            </div>
+            <div className="ghost_evidence">{ghost.evidence.map(evidence => renderEvidence(evidence))}</div>
+          </div>
         </div>
-        <ul>
-          {ghost.wiki.tells.map(tell => renderTalles(tell.data))}
-        </ul>
-      </div>
-    </div>
-    
-    </motion.div>
-  </motion.div>
-  
+
+        <div className="content" ref={contentRef}>
+          <ul>
+            {ghost.wiki.tells.map(tell => renderTalles(tell.data))}
+          </ul>
+        </div>
+      </motion.div>
+
+
   );
 }
 

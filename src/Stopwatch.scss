@@ -1,31 +1,24 @@
 
 .stopwatch-container{
-  width: 100%;
-  font-size: 30px;
+ font-size: 30px;
+ display: flex;
+ justify-content: center;
+ width: 30%;
+ flex-wrap: wrap;
+ flex-direction: column;
+ align-items: center;
 }
- //.stopwatch-time {
- //    text-align: center;
- //    color: #fff;
- //    font-size: 80px;
- //}
- //
+.stopwatch-time{
+ 
+}
+
  .stopwatch-buttons {
-     display: flex;
-     justify-content: center;
+  height: auto;
  }
 
  .stopwatch-buttons button {
-     //margin: 20px;
-     border: none;
-     padding: 10px 30px;
-     cursor: pointer;
-     color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 50%;
+  width: 100%;
  }
- //
- //.stopwatch-buttons button:first-child {
- //    background-color: green;
- //}
- //
- //.stopwatch-buttons button:last-child {
- //    background-color: red;
- //}
+ 
